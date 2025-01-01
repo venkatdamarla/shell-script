@@ -1,3 +1,3 @@
 #!/bin/bash
 USERID=$(id -u)
-echo "The UserID value is: $USERID
+echo "The UserID value is: $USERID"
