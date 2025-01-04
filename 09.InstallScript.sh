@@ -1,8 +1,8 @@
 #!/bin/bash
 USERID=$(id -u)
-R=\e[31m
-G=\e[32m
-Y=\e[33m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
 echo "The UserID value is: $USERID"
 if [ $USERID -eq 0 ] 
 then
