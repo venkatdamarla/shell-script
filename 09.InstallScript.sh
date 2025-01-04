@@ -18,7 +18,7 @@ installation_validate()
         echo -e "$2 installation .....$R FAILURE"
         exit 1  
     else
-        echo "$2 installation ..... $G SUCCESS"
+        echo -e "$2 installation ..... $G SUCCESS"
     fi
 }
 dnf list installed mysql
@@ -28,7 +28,7 @@ then
     installation_validate $? "My SQL"
     
 else
-    echo "My SQL $Y already installed"
+    echo -e "My SQL $Y already installed"
 fi
 
 dnf list installed git
@@ -37,6 +37,6 @@ then
     dnf install git -y
     installation_validate $? "GIT"
 else
-     echo "GIT $Y already installed"
+     echo -e "GIT $Y already installed"
 fi
 
