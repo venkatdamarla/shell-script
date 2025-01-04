@@ -7,6 +7,8 @@ Logs_Folder="/var/log/shellscript-logs"
 Log_File=$( echo $0 | cut -d "." -f1)
 TimeStamp=$(date +%y-%m-%d-%H-%M-%S)
 Log_File_Name="$Logs_Folder/$Log_File-$TimeStamp.log"
+echo "Venkata"
+echo "The File Name is : $Log_File_Name"
 
 echo "The UserID value is: $USERID" &>>Log_File_Name
 if [ $USERID -eq 0 ] 
