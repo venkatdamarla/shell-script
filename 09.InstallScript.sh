@@ -3,12 +3,17 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-echo "The UserID value is: $USERID"
+Logs_Folder="/var/log/shellscript-logs"
+Log_File=$( echo $0 | cut -d "." -f1)
+TimeStamp=$(date +%y-%m-%d-%H-%M-%S)
+Log_File_Name="$Logs_Folder/$Log_File-$TimeStamp.log"
+
+echo "The UserID value is: $USERID" &>>Log_File_Name
 if [ $USERID -eq 0 ] 
 then
-   echo "The user has the sudo access and he can install the softwares"
+   echo "The user has the sudo access and he can install the softwares" &>>Log_File_Name
 else
-   echo "The user doesn't have the sudo access and he can't install the softwares"
+   echo "The user doesn't have the sudo access and he can't install the softwares" &>>Log_File_Name
    exit 1
 fi
 installation_validate()
