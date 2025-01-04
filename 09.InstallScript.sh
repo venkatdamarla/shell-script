@@ -8,14 +8,21 @@ else
    echo "The user doesn't have the sudo access and he can't install the softwares"
    exit 1
 fi
-dnf install mysql -y
+dnf list installed mysql
 if [ $? -ne 0 ]
 then
-  echo "My sql installation ..... FAILURE"
-  exit 1  
+    dnf install mysql -y
+    if [ $? -ne 0 ]
+    then
+    echo "My sql installation ..... FAILURE"
+    exit 1  
+    else
+    echo "My sql installation ..... SUCCESS"
+    fi
 else
-   echo "My sql installation ..... SUCCESS"
+    echo "My Sql already installed"
 fi
+
 dnf list installed git
 if [ $? -ne 0 ]
 then
