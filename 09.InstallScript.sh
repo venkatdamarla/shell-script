@@ -1,5 +1,8 @@
 #!/bin/bash
 USERID=$(id -u)
+R=\e[31m
+G=\e[32m
+Y=\e[33m
 echo "The UserID value is: $USERID"
 if [ $USERID -eq 0 ] 
 then
@@ -12,10 +15,10 @@ installation_validate()
 {
     if [ $1 -ne 0 ]
     then
-        echo "$2 installation ..... FAILURE"
+        echo -e "$2 installation .....$R FAILURE"
         exit 1  
     else
-        echo "$2 installation ..... SUCCESS"
+        echo "$2 installation ..... $G SUCCESS"
     fi
 }
 dnf list installed mysql
@@ -25,7 +28,7 @@ then
     installation_validate $? "My SQL"
     
 else
-    echo "My SQL already installed"
+    echo "My SQL $Y already installed"
 fi
 
 dnf list installed git
@@ -34,6 +37,6 @@ then
     dnf install git -y
     installation_validate $? "GIT"
 else
-     echo "GIT already installed"
+     echo "GIT $Y already installed"
 fi
 
