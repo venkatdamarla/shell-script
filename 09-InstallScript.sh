@@ -10,12 +10,12 @@ Log_File_Name="$Logs_Folder/$Log_File-$TimeStamp.log"
 echo "Venkata"
 echo "The File Name is : $Log_File_Name"
 
-echo "The UserID value is: $USERID" &>>Log_File_Name
+echo "The UserID value is: $USERID" &>>$Log_File_Name
 if [ $USERID -eq 0 ] 
 then
-   echo "The user has the sudo access and he can install the softwares" &>>Log_File_Name
+   echo "The user has the sudo access and he can install the softwares" &>>$Log_File_Name
 else
-   echo "The user doesn't have the sudo access and he can't install the softwares" &>>Log_File_Name
+   echo "The user doesn't have the sudo access and he can't install the softwares" &>>$Log_File_Name
    exit 1
 fi
 installation_validate()
