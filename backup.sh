@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m"
 Logs_Folder="/var/log/shellscript-logs"
 echo $Logs_Folder
-Log_File="$(echo $0 | cut -d "." -f1)
+Log_File="$(echo $0 | cut -d "." -f 1)
 echo $Log_File
 Timestamp=$(year +"%Y-%m-%d-%H-%M-%S)
 echo $Timestamp
