@@ -28,12 +28,20 @@ then
 fi
 if [ ! -d $Source_Directory ]
 then
-   echo " The Source Directory not exits"
+   echo " The Source directory not exits"
 fi
 if [ ! -d $Dest_Directory ]
 then
-  echo "THe Destination directory not exists"
+  echo "The Destination directory not exists"
 fi
 
+Files=$( find $Source_Directory -name ("*.log") -mtime +$Days)
+if[ -n "$Files" ]
+then
+    echo "Files are : $Files"
+    Zip_File="$Dest_Directory/Source_Logs-$Timestamp.zip"
+else
+    echo "No files older than $Days days"
 
+fi
 
