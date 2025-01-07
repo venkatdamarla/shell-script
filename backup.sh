@@ -35,7 +35,7 @@ then
   echo "The Destination directory not exists"
 fi
 
-Files=$(find $Source_Directory -name "*.log" -mtime +$DAYS)
+Files=$(find $Source_Directory -name "*.log" -mtime +$Days)
 echo "Files are : $Files"
 
 if[ -n "$Files" ]
