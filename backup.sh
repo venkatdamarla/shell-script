@@ -43,14 +43,7 @@ then
    echo "Files are : $Files"
    Zip_File="$Dest_Directory/Source_Logs-$Timestamp.zip"
    echo $Zip_File
-   find $Source_Directory -name "*.log" -mtime +$Days | zip -@ "$Zip_File"
-   if[ -f "$Zip_File" ]
-   then
-      echo "The zip file got created"
-   else
-      echo "The zip file not created due to some error"
-
-   fi   
+   find $Source_Directory -name "*.log" -mtime +$Days | zip -@ "$Zip_File"   
 else
     echo "No files found older than $DAYS"
 fi
