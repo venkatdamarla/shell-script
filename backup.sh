@@ -14,5 +14,5 @@ echo $Timestamp
 Log_File_Name="$Logs_Folder/$Log_File-$Timestamp.log"
 echo $Log_File_Name
 
-echo "The script execution started at :$Timestamp" &>>$Log_File_Name
-echo "Venkata"
+echo -e "$G The script execution started at :$Timestamp $N" &>>$Log_File_Name
+
