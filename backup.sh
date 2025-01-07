@@ -39,12 +39,5 @@ echo $Days
 Files=$(find $Source_Directory -name "*.log" -mtime +$Days)
 echo "Files are : $Files"
 
-if[ -n "$Files" ]
-then
-    echo "Files are : $Files"
-    Zip_File="$Dest_Directory/Source_Logs-$Timestamp.zip"
-else
-    echo "No files older than $Days days"
 
-fi
 
