@@ -5,8 +5,9 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-LOGS-FOLDER="/var/log/shellscript-logs"
-LOG-FILE=$( echo $0 | cut -d "." -f1) 
-TIMESTAMP=$( date +%Y-%m-%d-%H-%M-%S)
-LOG-FILE-NAME="$LOGS-FOLDER/$LOG-FILE-$TIMESTAMP.log"
-echo "Script started executing at: $TIMESTAMP" &>>LOG-FILE-NAME
+Logs_Folder="/var/log/shellscript-logs"
+Log_File="$( echo $0 | cut -d "." -f1)
+Timestamp=$(year +"%Y-%m-%d-%H-%M-%S)
+Log_File_Name="$Logs_Folder/$Log_File-$Timestamp.log"
+
+echo "Script started executing at: $Timestamp" &>>Log_File_Name
