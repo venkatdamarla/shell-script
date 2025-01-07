@@ -12,4 +12,4 @@ echo $Log_File
 Timestamp=$(year +"%Y-%m-%d-%H-%M-%S)
 echo $Timestamp
 Log_File_Name="$Logs_Folder/$Log_File-$Timestamp.log"
-echo "Script started executing at: $Timestamp" &>>$Log_File_Name
+#echo "Script started executing at: $Timestamp" &>>$Log_File_Name
