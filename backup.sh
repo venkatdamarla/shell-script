@@ -11,7 +11,8 @@ Source_Directory=$1
 Dest_Directory=$2
 Days=${3:-14}
 Logs_Folder="/var/log/shellscript-logs"
-Log_File=$(echo $0 | cut -d "." -f 1)
+#Log_File=$(echo $0 | cut -d "." -f 1)
+Log_File=$(echo $0 | awk -F "/" '{print $NF}' | cut -d "." -f1 )
 Timestamp=$(date +%Y-%m-%d-%H-%M-%S)
 Log_File_Name="$Logs_Folder/$Log_File-$Timestamp.log"
 
