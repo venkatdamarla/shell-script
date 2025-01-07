@@ -38,6 +38,3 @@ echo $Days
 
 Files=$(find $Source_Directory -name "*.log" -mtime +$Days)
 echo "Files are : $Files"
-
-
-
