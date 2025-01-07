@@ -48,6 +48,8 @@ then
    then
      echo "Zip file got created"
    else
+    echo "Zip file got failed"
+    exit 1
 
    fi
 else
