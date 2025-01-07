@@ -50,7 +50,7 @@ then
         do
           echo "Deleting file : $filepath"
           rm -rf $filepath
-          echo "Deleted file :" $filepath"
+          echo "Deleted file : $filepath"
         done <<< $Files
         
    else
